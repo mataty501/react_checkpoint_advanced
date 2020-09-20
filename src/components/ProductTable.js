@@ -1,32 +1,21 @@
 import React from 'react'
-
+import PropTypes from 'prop-types';
 const ProductTable = (props) => {
-
+  console.log(props)
   return (
       
-<div>
-
-    <table style={{ width: "100%" , textAlign: "center"}} >
-  <tbody>
-    <tr>
-      <th>Name</th>
-      <th>Price</th>
-      <th>Type</th>
+    <tr key>
+      <td>{props.data.name}</td>
+      <td>{props.data.price}</td>
+      <td>{props.data.category}</td>
     </tr>
-
-    <tr>
-      <td>{props.data[0].name}</td>
-      <td>{props.data[0].price}</td>
-      <td>{props.data[0].category}</td>
-    </tr>
-    
-  </tbody>
-</table>
-    
-</div>   
-    
-    
+   
     )
 }
+
+
+// ProductTable.propTypes = {
+//   data: PropTypes.bool ,
+// }
 
 export default ProductTable;
