@@ -38,7 +38,6 @@ function App() {
   }
 ]
 
-console.log(products)
   return (
     <div>
 

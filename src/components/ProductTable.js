@@ -1,10 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 const ProductTable = (props) => {
-  console.log(props)
   return (
       
-    <tr key>
+    <tr>
       <td>{props.data.name}</td>
       <td>{props.data.price}</td>
       <td>{props.data.category}</td>
@@ -14,8 +13,8 @@ const ProductTable = (props) => {
 }
 
 
-// ProductTable.propTypes = {
-//   data: PropTypes.bool ,
-// }
+ProductTable.propTypes = {
+   category: PropTypes.oneOf(['electronics','clothes'])
+}
 
 export default ProductTable;
